@@ -21,7 +21,7 @@ services:
       MYSQL_DATABASE: ${WORDPRESS_DB_NAME}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-    container_name: wp_db
+    container_name: wp_db_mikaleb_back
 
   blog:
     image: wordpress:latest
