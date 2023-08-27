@@ -8,6 +8,7 @@ networks:
 
 services:
   db:
+    restart: unless-stopped
     image: lscr.io/linuxserver/mariadb:latest
     networks:
       - internal
@@ -24,6 +25,7 @@ services:
     container_name: wp_db_mikaleb_back
 
   mikaleb_blog:
+    restart: unless-stopped
     image: wordpress:latest
     environment:
       WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
